@@ -1,0 +1,17 @@
+<app-seperation-section></app-seperation-section>
+<app-seperation-section></app-seperation-section>
+<app-seperation-section></app-seperation-section>
+
+<div class="container">
+  
+<mat-tab-group mat-align-tabs="center" >
+  <mat-tab style="font-size: 1.25rem; color: #00232b; font-weight: 800;"  label="Thông tin cá nhân" class="info" >
+    <app-user-info [userInfo]="userInfoFromApi"></app-user-info>
+  </mat-tab>
+  <mat-tab label="Khóa học của tôi">
+    <app-my-courses [listMyCourses]="listMyCourses"></app-my-courses>
+  </mat-tab>
+</mat-tab-group>
+</div>
+
+<app-modal-update></app-modal-update>

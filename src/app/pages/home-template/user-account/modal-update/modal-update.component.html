@@ -1,0 +1,111 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modelId"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modelTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">CẬP NHẬT THÔNG TIN</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          #closebutton
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <form #updateForm="ngForm" (ngSubmit)="update(updateForm.value)">
+                <div class="form-group">
+                  <label for="">Tài khoản</label>
+                  <input
+                  disabled='true'
+                    type="text"
+                    value="{{ userInfo.taiKhoan }}"
+                    class="form-control"
+                    name="taiKhoan"
+                    ngModel
+                    required
+                    #TaiKhoan="ngModel"
+                  />
+
+                </div>
+                <div class="form-group">
+                  <label for="">Mật khẩu</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="{{ userInfo.matKhau }}"
+                    name="matKhau"
+                    ngModel
+                    required
+                    #Password="ngModel"
+                  />
+
+                </div>
+                <div class="form-group">
+                  <label for="">Họ tên</label>
+                  <input
+                    type="text"
+                    value="{{ userInfo.hoTen }}"
+                    class="form-control"
+                    name="hoTen"
+                    ngModel
+                    required
+                    #HoTen="ngModel"
+                  />
+
+                </div>
+                <div class="form-group">
+                  <label for="">Số điện thoại</label>
+                  <input
+                    type="text"
+                    value="{{ userInfo.soDT }}"
+                    class="form-control"
+                    name="soDT"
+                    ngModel
+                    required
+                    #SoDT="ngModel"
+                  />
+
+                </div>
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input
+                    type="text"
+                    value="{{ userInfo.email }}"
+                    class="form-control"
+                    name="email"
+                    ngModel
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    #Email="ngModel"
+                  />
+
+                </div>
+       
+                  <button type="submit" class="btn btn-success modal-footer" id="closeModal"  >Cập nhật</button>
+              </form>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

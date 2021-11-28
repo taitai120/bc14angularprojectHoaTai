@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+// $fa-font-path: "~font-awesome/fonts";
+
+
+// html,
+// body {
+//   height: 100%;
+//   font-size: 62.5%;
+//   overflow-x: hidden;
+//   scroll-behavior: smooth;
+//   scroll-padding-top: 7rem;
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+//   box-sizing: border-box;
+//   outline: none;
+//   border: none;
+//   text-decoration: none;
+//   text-transform: capitalize;
+//   transition: all 0.2s linear;
+// }
+
+// @import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~src/styles/scss/index.scss";
+button,
+input {
+  outline: 0 !important;
+  &:focus {
+    box-shadow: none !important;
+  }
+  &:visited {
+    box-shadow: none !important;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-text;
+}

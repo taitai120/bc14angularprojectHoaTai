@@ -1,0 +1,83 @@
+<!-- <p>book-course works!</p>
+
+<button (click)="bookCourse()" class="btn btn-danger">Book Course</button> -->
+
+<section class="gradient-custom">
+  <div class="container my-5 py-5">
+    <div class="row d-flex justify-content-center py-5">
+      <div class="col-md-7 col-lg-5 col-xl-4">
+        <div class="card" style="border-radius: 15px">
+          <div class="card-body p-4">
+            <form>
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="typeText"
+                    class="form-control form-control-lg"
+                    siez="17"
+                    placeholder="Card Number"
+                    minlength="19"
+                    maxlength="19"
+                  />
+                </div>
+                <img
+                  src="https://img.icons8.com/color/48/000000/visa.png"
+                  alt="visa"
+                  width="64px"
+                />
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="typeName"
+                    class="form-control form-control-lg"
+                    siez="17"
+                    placeholder="Cardholder's Name"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center pb-2"
+              >
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="typeExp"
+                    class="form-control form-control-lg"
+                    placeholder="Expiration"
+                    size="7"
+                    id="exp"
+                    minlength="7"
+                    maxlength="7"
+                  />
+                </div>
+                <div class="form-outline">
+                  <input
+                    type="password"
+                    id="typeText2"
+                    class="form-control form-control-lg"
+                    placeholder="Cvv"
+                    size="1"
+                    minlength="3"
+                    maxlength="3"
+                  />
+                </div>
+                <button type="button" class="btn btn-info btn-lg btn-rounded" (click)="bookCourse()">
+                    <fa-icon [icon]="faArrowRight" ></fa-icon>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

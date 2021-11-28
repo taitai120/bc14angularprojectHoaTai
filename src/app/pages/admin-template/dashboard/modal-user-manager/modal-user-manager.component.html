@@ -1,0 +1,122 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalQuanLyThanhVien"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modelTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalQuanLyThanhVienLabel">
+          <span *ngIf="userEdit">SỬA NGƯỜI DÙNG</span>
+          <span *ngIf="!userEdit">THÊM NGƯỜI DÙNG</span>
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          #closebutton
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <form #formQuanLyThanhVien="ngForm">
+                <div class="form-group">
+                  <label for="">Tài khoản</label>
+                  <input
+                    [disabled]="userEdit"
+                    type="text"
+                    class="form-control"
+                    name="taiKhoan"
+                    ngModel
+                    #taiKhoan="ngModel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Mật khẩu</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="matKhau"
+                    ngModel
+                    #matKhau="ngModel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Họ tên</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="hoTen"
+                    ngModel
+                    #hoTen="ngModel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Số điện thoại</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="soDT"
+                    ngModel
+                    #soDT="ngModel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="email"
+                    ngModel
+                    #email="ngModel"
+                  />
+                </div>
+
+                
+
+                <div class="form-group">
+                  <label for="">Loại người dùng</label>
+                  <select
+                    #maLoaiNguoiDung="ngModel"
+                    name="maLoaiNguoiDung"
+                    class="form-control"
+                    ngModel
+                  >
+                    <option value="HV">Học viên</option>
+                    <option value="GV">Giáo vụ</option>
+                  </select>
+                </div>
+              </form>
+              <div class="modal-footer">
+                <button type="button" mat-raised-button data-dismiss="modal">
+                  Close
+                </button>
+                <button
+                  style="margin-right: 1rem"
+                  type="button"
+                  mat-raised-button
+                  color="accent"
+                  (click)="handleOnSubmit()"
+                >
+                  <span *ngIf="userEdit">Cập Nhật</span>
+                  <span *ngIf="!userEdit">Thêm</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

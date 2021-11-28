@@ -1,0 +1,48 @@
+.category__header {
+  background-color: #00232b;
+  color: white;
+  padding: 15px;
+}
+
+.category__name {
+  display: flex;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+  margin: 0 0;
+  word-spacing: 4px;
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0;
+}
+
+.category__list h3 {
+  font-size: 1.25rem;
+  color: #00232b;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: bold;
+}
+
+.category__course {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    margin-top: 80px;
+  }
+}

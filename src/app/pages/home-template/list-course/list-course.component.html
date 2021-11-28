@@ -1,0 +1,31 @@
+<app-seperation-section></app-seperation-section>
+<app-seperation-section></app-seperation-section>
+<app-seperation-section></app-seperation-section>
+
+<section>
+  <app-seperation-section></app-seperation-section>
+  <div class="category__header">
+    <div class="container">
+      <div class="category__name">
+        <h1>{{ categoryName }}</h1>
+      </div>
+    </div>
+  </div>
+  <app-seperation-section></app-seperation-section>
+
+  <div class="container">
+    <div class="category__list">
+      <h3>Danh sách khóa học :</h3>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-md-3 category__course"
+        *ngFor="let course of listCourseByCategory"
+      >
+        <app-course [course]="course"></app-course>
+      </div>
+    </div>
+  </div>
+</section>
+<app-seperation-section></app-seperation-section>

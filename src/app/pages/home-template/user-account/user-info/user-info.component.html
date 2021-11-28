@@ -1,0 +1,41 @@
+<app-seperation-section></app-seperation-section>
+
+<div class="container list__content">
+  <div class="row">
+    <div class="col-md-6">
+      <img
+        class="img-fluid"
+        src="./../../../../../assets/img/portrait-square-05.jpg"
+      />
+    </div>
+    <div class="col-md-6 list__content" >
+      <ul class="list-group">
+        <li class="list-group-item">
+          <b>Email</b>: <span>{{ userInfo.email }}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Họ tên</b>: <span>{{ userInfo.hoTen }}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Số điện thoại</b>: <span>{{ userInfo.soDT }}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Tài khoản</b>: <span>{{ userInfo.taiKhoan }}</span>
+        </li>
+        <li class="list-group-item">
+          <b>Mật khẩu</b>: <span>{{ userInfo.matKhau }}</span>
+        </li>
+      </ul>
+      <button
+        class="btn btn-success"
+        data-toggle="modal"
+        data-target="#modelId"
+        (click)="updateUserInfo()"
+      >
+        Cập nhật
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-seperation-section></app-seperation-section>

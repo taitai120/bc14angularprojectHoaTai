@@ -1,0 +1,19 @@
+<app-banner></app-banner>
+<app-seperation-section></app-seperation-section>
+<div class="container">
+  <div style="margin-bottom: 25px; text-align: center">
+    <h1 class="mt-5">CÁC KHÓA HỌC NỔI BẬT</h1>
+  </div>
+  <div class="row">
+    <ng-container *ngIf="listCourse">
+      <div
+        class="col-md-3"
+        style="margin-bottom: 1.5rem"
+        *ngFor="let course of listCourse | slice: 20:28"
+      >
+        <app-course [course]="course"></app-course>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-seperation-section></app-seperation-section>

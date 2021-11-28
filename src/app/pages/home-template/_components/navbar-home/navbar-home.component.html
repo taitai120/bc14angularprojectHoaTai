@@ -1,0 +1,109 @@
+<nav
+  class="
+    navbar
+    fixed-top
+    navbar-light navbar-expand-md
+    bg-faded
+    justify-content-center
+  "
+>
+  <a
+    routerLinkActive="activeLogo"
+    routerLink="/"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="navbar-brand d-flex w-50 mr-auto"
+    >CycloneSoft</a
+  >
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsingNavbar3"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- NavLinks -->
+  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+    <ul class="navbar-nav w-100 justify-content-center">
+      <li class="nav-item active" style="margin: 0 10px 0 10px">
+        <a class="nav-link homepage" routerLink="/">Trang Chủ</a>
+      </li>
+
+      <li class="nav-item dropdown" style="margin: 0 10px 0 10px">
+        <a
+          class="nav-link dropdown-toggle list-course"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Danh mục khóa học
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a
+            *ngFor="let category of couseCategory"
+            class="dropdown-item"
+            routerLink="list-course/{{ category.maDanhMuc }}"
+            >{{ category.tenDanhMuc }}</a
+          >
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+      <ng-container
+        class="navbar-nav col-3"
+        *ngIf="condition; then blockIn; else blockOut"
+      ></ng-container>
+
+      <ng-template #blockIn>
+        <li class="nav-item">
+          <a class="nav-link" (click)="viewAccount()">
+            <div
+              id="user-image"
+              style="width: 2.5rem; height: 2.5rem; overflow: hidden"
+            >
+              <img
+                style="border-radius: 50%; cursor: pointer"
+                class="img-fluid img-user"
+                src="./../../../../../assets/img/portrait-square-05.jpg"
+                alt="avatar"
+              />
+            </div>
+          </a>
+        </li>
+        <li class="nav-item" style="align-self: center">
+          <a class="nav-link logout" style="cursor: pointer" (click)="logOut()">
+            Đăng Xuất
+          </a>
+        </li>
+      </ng-template>
+
+      <ng-template #blockOut>
+        <li class="nav-item">
+          <a class="nav-link">
+            <div
+              id="user-image"
+              style="width: 2.5rem; height: 2.5rem; overflow: hidden"
+            >
+              <img
+                style="border-radius: 50%"
+                class="img-fluid"
+                src="./../../../../../assets/img/avatar.png"
+                alt="avatar"
+              />
+            </div>
+          </a>
+        </li>
+        <li class="nav-item" style="align-self: center">
+          <a class="nav-link logout" routerLink="login-navbar">Đăng Nhập</a>
+        </li>
+        <li class="nav-item" style="align-self: center">
+          <a class="nav-link logout" routerLink="register-navbar">Đăng Ký</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

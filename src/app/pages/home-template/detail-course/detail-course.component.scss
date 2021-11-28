@@ -1,0 +1,68 @@
+.background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.h-100 {
+  height: 70vh !important;
+}
+
+.mask-custom {
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  height: 70vh;
+  transform: scale(0.99);
+}
+
+.detail__content{
+  padding-left: 4rem;
+}
+
+.detail__content h2 {
+  color: #00232b;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.detail__content p {
+ padding-top: 1rem;
+}
+
+.button {
+  font-size: 1rem;
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  background: #00232b;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #003845;
+
+}
+
+.image{
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+fa-icon{
+  color: yellow;
+}
+
+.detail__describe{
+  font-size: 1rem;
+  word-spacing: 2px;
+}
+

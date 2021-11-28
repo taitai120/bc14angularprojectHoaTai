@@ -1,0 +1,24 @@
+<div class="example">
+  <article class="card">
+    <header class="card__primary-title">
+      <figure class="image image--avatar">
+        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/j-v28-gift-038-icons_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=21ba517864f43252d095efd7e285dea4" alt="Cat" />
+      </figure>
+      <div class="item item--two-lines">
+        <h2 class="text-medium ">{{course.danhMucKhoaHoc.tenDanhMucKhoaHoc}}</h2>
+        <h3 class="text-secondary text-normal text-small">{{course.ngayTao}}</h3>
+      </div>
+    </header>
+    <figure class="image">
+      <img src="{{course.hinhAnh}}" alt="course" />
+    </figure>
+    <div class="card__body">
+      <div class="card__supporting-text">
+        {{course.tenKhoaHoc}}
+      </div>
+    </div>
+    <footer class="card__actions">
+      <a class="button"  (click)="routerLinkDetail()">Đăng Ký</a>
+    </footer>
+  </article>
+</div>

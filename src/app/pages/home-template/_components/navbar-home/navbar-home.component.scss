@@ -1,0 +1,91 @@
+@import "~src/styles/scss/index.scss";
+
+// *******************************************
+
+.navbar {
+  background: white !important;
+  opacity: 0.9;
+  padding: 1.5em !important;
+  transition: .2s ease;
+
+}
+
+.navbar .navbar-brand {
+   font-weight: bold ;
+   font-size: 2rem;
+} 
+
+.navbar .logout {
+  
+  font-size: 1rem;
+  font-weight: 600;
+} 
+
+.navbar .homepage  {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.navbar .list-course{
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: none;
+}
+
+.dropdown.show .dropdown-menu { /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+  max-height: 300px;
+  opacity: 1;
+}
+
+
+.navbar-inverse{
+  background:  #003845 !important;
+  opacity: 0.9;
+  padding: 1.25em !important;
+  transition: .2s ease;
+  
+}
+
+
+.navbar-inverse .navbar-brand {
+   font-weight: bold ;
+   font-size: 2rem;
+   color: white;
+} 
+
+.navbar-inverse .logout {
+  color: white;
+  
+  font-size: 1rem;
+  font-weight: normal;
+} 
+
+.navbar-inverse .homepage  {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: white;
+
+}
+
+.navbar-inverse .list-course{
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: white;
+
+}

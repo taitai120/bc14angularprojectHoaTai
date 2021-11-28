@@ -1,0 +1,14 @@
+::ng-deep #modalThongTinTaiKhoan {
+  .modal-dialog {
+    max-width: 80% !important;
+  }
+  .border-left {
+    font-size: 12px;
+  }
+}
+
+.modal-title span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-left: 1rem;
+}

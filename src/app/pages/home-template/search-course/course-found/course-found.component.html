@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ course.hinhAnh }}" class="image-fluid" />
+    </div>
+    <div class="col-md-8 px-3">
+      <div class="card-block px-3 card-content">
+        <a routerLink="/detail/{{ course.maKhoaHoc }}" class="card-title">
+          Khóa học {{ course.tenKhoaHoc }}
+        </a>
+
+        <div>
+          <p class="card-text">{{ course.moTa }}</p>
+        </div>
+
+        <div class="button">
+          <button class="btn" (click)="xemChiTiet()">Chi tiết</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

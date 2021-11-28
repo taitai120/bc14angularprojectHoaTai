@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+          <div class="form-group">
+            <label for="">Tài khoản</label>
+            <input
+              type="text"
+              class="form-control"
+              name="taiKhoan"
+              ngModel
+              required
+              minlength="7"
+              maxlength="15"
+              #TaiKhoan="ngModel"
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="TaiKhoan.errors && (TaiKhoan.dirty || TaiKhoan.touched)"
+            >
+              <!-- Kiểm tra rỗng -->
+              <div *ngIf="TaiKhoan.errors.required">Vui lòng nhập tài khoản</div>
+              <!-- Kiểm tra độ dài -->
+              <div *ngIf="TaiKhoan.errors.minlength || TaiKhoan.errors.maxlength">
+                Độ dài ký tự phải từ 7-15
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="">Mật khẩu</label>
+            <input
+              type="text"
+              class="form-control"
+              name="matKhau"
+              ngModel
+              required
+              #Password="ngModel"
+            />
+            <div class="alert alert-danger" *ngIf="Password.errors && (Password.dirty || Password.touched)">
+                <div *ngIf="Password.errors.required">
+                    Vui lòng nhập mật khẩu
+                </div>
+            </div>
+          </div>
+
+
+
+          <button class="btn btn-danger" [disabled]='!loginForm.valid'>Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

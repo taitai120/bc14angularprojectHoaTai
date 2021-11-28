@@ -1,0 +1,120 @@
+<app-seperation-section></app-seperation-section>
+<app-seperation-section></app-seperation-section>
+
+<header>
+  <section>
+    <div
+      class="background bg-image h-100"
+      style="background-image: url({{ detailCourse.hinhAnh }})"
+    >
+      <div class="card mask-custom py-5 px-4 text-white">
+        <div class="row justify-content-center">
+          <!-- <div class="col-lg-12"> -->
+          <!-- <div class="mask d-flex align-items-center"> -->
+          <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-4">
+                  <img
+                    src="{{ detailCourse.hinhAnh }}"
+                    class="img-fluid image"
+                  />
+                </div>
+
+                <div class="col-8 flex-column detail__content">
+                  <h2>{{ detailCourse.danhMucKhoaHoc.tenDanhMucKhoaHoc }}</h2>
+                  <p class="lead font-weight-normal my-4">
+                    Đánh giá khóa học 
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                  </p>
+                  <p class="detail__describe">Mô tả khóa học: {{detailCourse.moTa}}</p>
+                  <a
+                    routerLink="/book"
+                    [queryParams]="{
+                      maKhoaHoc: detailCourse.maKhoaHoc
+                    }"
+                    class="button"
+                    >Đăng Ký</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<app-seperation-section></app-seperation-section>
+
+<!-- <div class="carousel container">
+  <div className="carousel_item">
+    <div className="carousel_img">
+      <img className="img_bg" src="{{ detailCourse.hinhAnh }}" alt="" />
+    </div>
+    <div>
+      <p>Đánh giá khóa học</p>
+      <a
+        routerLink="/book"
+        [queryParams]="{
+          maKhoaHoc: detailCourse.maKhoaHoc
+        }"
+        class="btn btn-danger"
+        >Đăng Ký</a
+      >
+    </div>
+    <div>
+      <p>Mô tả: {{ detailCourse.moTa }}</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div className="carousel__item">
+  <div className="carousel__img">
+    <img className="img__bg" src="{{ detailCourse.hinhAnh }}" alt="" />
+  </div>
+  
+</div> -->
+<!-- 
+<div class="container__detail">
+  <div >
+    <div style="background-image: url("{{ detailCourse.hinhAnh }}")"  class="overlay" />
+  </div>
+
+  <div class="content">
+    <div class="row">
+      <div class="col-md-3">
+        <img className="img-fluid" src="{{ detailCourse.hinhAnh }}" alt="" />
+      </div>
+
+      <div class="col-md-6">
+        <p>Đánh giá khóa học</p>
+        <a
+          routerLink="/book"
+          [queryParams]="{
+            maKhoaHoc: detailCourse.maKhoaHoc
+          }"
+          class="btn btn-danger"
+          >Đăng Ký</a
+        >
+      </div>
+    </div>
+    <h1>A blurred overlay</h1>
+    <p>
+      ... mask or whatever<br />that is responsive and could be cross-browser
+      compatible back to IE9
+    </p>
+
+    <div class="btn-grp zoom-out">
+      <a href="#" class="btn">Follow</a>
+      <a href="#" class="btn btn-primary">Like</a>
+    </div>
+  </div> 
+</div>
+
+ -->

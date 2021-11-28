@@ -1,0 +1,10 @@
+<app-seperation-section></app-seperation-section>
+
+<div class="container">
+  <h1>Tìm thấy {{ courseSearched.length }} khóa học {{ searchKeyword }}</h1>
+  <div *ngFor="let course of courseSearched">
+    <app-course-found [course]="course"></app-course-found>
+  </div>
+</div>
+
+<app-seperation-section></app-seperation-section>
